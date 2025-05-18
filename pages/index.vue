@@ -71,7 +71,7 @@ const btn_claim = ref(null);
 const currentStep = ref(0);
 const isPlaying = ref(false);
 
-const steps = [0.7, 1.5, 1.5, 1.5];
+const steps = [0.7, 1.5, 1.4, 1.4];
 
 const form = ref({
   ip: null,
@@ -112,7 +112,7 @@ function doHammer() {
     setTimeout(() => {
       mgacha.value.classList.add('hide');
       isPlaying.value = false;
-    }, 1900);
+    }, 1800);
   }
 }
 
