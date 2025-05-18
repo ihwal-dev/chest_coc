@@ -68,58 +68,54 @@ const gacha = ref(null);
 const mgacha = ref(null);
 const btn_claim = ref(null);
 
-
-const timeout = ref(null);
 const currentStep = ref(0);
-const isPlaying = ref(false); // <- Penanda sedang berjalan
+const isPlaying = ref(false);
 
-const steps = [0.7, 1.7, 1.5, 1.5];
+const steps = [0.7, 1.5, 1.5, 1.5];
 
 const form = ref({
   ip: null,
   device: null
 });
 
-function openModalGacha()
-{
-    mgacha.value.classList.remove('hide');
-    btn_claim.value.classList.add('hide');
-    doHammer();
+function openModalGacha() {
+  mgacha.value.classList.remove('hide');
+  btn_claim.value.classList.add('hide');
+  doHammer();
 }
 
 function doHammer() {
-  // Cegah jika sedang jalan
-  if (isPlaying.value) return;
-
-  if (!gacha.value) return;
+  if (isPlaying.value || !gacha.value) return;
 
   isPlaying.value = true;
 
-  if (timeout.value !== null) {
-    clearTimeout(timeout.value);
-    timeout.value = null;
-  }
+  const video = gacha.value;
 
   if (currentStep.value < steps.length) {
-    gacha.value.play();
+    const start = video.currentTime;
+    const target = start + steps[currentStep.value];
 
-    timeout.value = setTimeout(() => {
-      gacha.value.pause();
-      timeout.value = null;
-      isPlaying.value = false; // <- Izinkan klik lagi setelah selesai
-    }, steps[currentStep.value] * 1000);
+    const onTimeUpdate = () => {
+      if (video.currentTime >= target) {
+        video.pause();
+        video.removeEventListener('timeupdate', onTimeUpdate);
+        isPlaying.value = false;
+        currentStep.value++;
+      }
+    };
 
-    currentStep.value++;
+    video.addEventListener('timeupdate', onTimeUpdate);
+    video.play();
   } else {
-    gacha.value.play();
+    video.play();
 
-    // Optional: tetap blokir klik selama 2 detik (waktu animasi)
     setTimeout(() => {
       mgacha.value.classList.add('hide');
-      isPlaying.value = false; // <- Bebaskan klik lagi
-    }, 1950);
+      isPlaying.value = false;
+    }, 1900);
   }
 }
+
 </script>
 
 <style scoped>
