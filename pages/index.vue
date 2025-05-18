@@ -71,7 +71,7 @@ const btn_claim = ref(null);
 const currentStep = ref(0);
 const isPlaying = ref(false);
 
-const steps = [0.7, 1.5, 1.4, 1.4];
+const steps = [0.6, 1.4, 1.3, 1.3];
 
 const form = ref({
   ip: null,
