@@ -1,0 +1,254 @@
+#__nuxt .popscid
+{
+    font-family: 'SupercellText-Medium';
+    text-shadow: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.75);
+}
+
+.popscid .logoscid
+{
+    width: 150px;
+}
+
+.logoscid img
+{
+    max-width: 100%;
+}
+
+
+.popscid .phone-verif
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.phone-verif .phone-title
+{
+    color: #000;
+}
+
+.phone-verif p
+{
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+}
+
+.phone-verif .phone-form
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.phone-form input
+{
+    width: 100%;
+    box-shadow: inset 0rem 0.0625rem 0.1875rem rgba(0, 0, 0, .25);
+    padding: 13px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: rgb(102 102 102 / 1);
+}
+
+.phone-form input:focus
+{
+    outline: 1px solid rgb(45 133 243 / 1);
+}
+
+.phone-form .phone-submit
+{
+    font-family: 'SupercellText-Bold';
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(#5793f3,#4281f2);
+    font-size: 13px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.popscid .success-alert
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.success-alert img
+{
+    max-width: 70px;
+    margin-bottom: 10px;
+}
+
+.success-alert .phone-title
+{
+    color: #000;
+}
+
+.success-alert p
+{
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+}
+
+.popscid .cont
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popscid .slider
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.slider .atas
+{
+    display: flex;
+    justify-content: space-between;
+}
+.popscid .slider span
+{
+    color: #000;
+    font-size: 13px;
+}
+
+.slider .bawah
+{
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 4px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(90deg,#3893f6,#2ddeb9);
+}
+
+.bawah .round
+{
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cont .biglogo
+{
+    margin-top: 25px;
+    width: 180px;
+}
+
+.biglogo img
+{
+    max-width: 100%;
+}
+
+.cont .logtext
+{
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+}
+.cont .logtext p
+{
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'SupercellText-Bold';
+}
+
+.cont .forms
+{
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.forms input
+{
+    width: 100%;
+    box-shadow: inset 0rem 0.0625rem 0.1875rem rgba(0, 0, 0, .25);
+    padding: 13px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: rgb(102 102 102 / 1);
+}
+
+.forms input:focus
+{
+    outline: 1px solid rgb(45 133 243 / 1);
+}
+
+.forms .info
+{
+    color: rgb(102 102 102 / 1);
+    text-align: center;
+    font-size: 12px;
+    font-family: 'SupercellText-Regular';
+}
+
+.forms .link
+{
+    color:rgb(45 133 243 / 1);
+}
+
+.forms .login-btn
+{
+    font-family: 'SupercellText-Bold';
+    padding: 13px;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(#5793f3,#4281f2);
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+.login-btn.green
+{
+    background: linear-gradient(#00E26B, #00B359);
+}

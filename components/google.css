@@ -1,0 +1,205 @@
+#__nuxt .popgoogle
+{
+    font-family: 'google-medium';
+    text-shadow: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.75);
+    color: #000;
+}
+
+.popgoogle .googlehead
+{
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #c4c7c5;
+    border-bottom: 1px solid #c4c7c5;
+}
+
+.googlehead .headImg
+{
+    width: 25px;
+    height: 25px;
+}
+
+.headImg img
+{
+    max-width: 100%;
+}
+
+.googlehead .headText
+{
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+.popgoogle .googlecontent
+{
+    width: 100%;
+    color: #000 !important;
+    padding: 60px 30px 15px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.googlecontent span
+{
+    color: #000 !important;
+}
+
+.googlecontent .contentTitle
+{
+    width: 100%;
+    font-size: 30px;
+}
+
+.googlecontent .contentDesc
+{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.googlecontent strong
+{
+    color: #185FD1;
+}
+
+.googlecontent .googleform
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+}
+.googleform .form-group
+{
+    position: relative;
+    width: 100%;
+}
+
+.form-group input
+{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid gray;
+    color: #000;
+}
+
+.form-group label
+{
+    position: absolute;
+    top:50%;
+    left: 8px;
+    padding: 5px;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 15px;
+    background: #fff;
+    transition: .3s all;
+    pointer-events: none;
+}
+
+.form-group input:focus
+{
+    border:1px solid #185FD1;
+}
+.form-group input:focus ~ label
+{
+    top: 0%;
+    font-size: 12px;
+    color: #185FD1;
+}
+.form-group input.focus ~ label
+{
+    top: 0%;
+    font-size: 12px;
+}
+
+.googleform .form-text
+{
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+}
+
+.form-text p
+{
+    color: #444746;
+}
+.form-text span
+{
+    color: rgb(11 87 208 / 1) !important;
+}
+
+
+.googleform .form-action
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-action .createaccount
+{
+    font-size: 14px;
+    color: rgb(11 87 208 / 1) !important;
+}
+
+
+.form-action .google-submit
+{
+    padding: 10px 20px;
+    color: #fff;
+    background: rgb(11 87 208 / 1);
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.googlecontent .google-footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #444746 !important;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.google-footer .footer-left
+{
+    color: #444746 !important;
+}
+
+.google-footer .footer-right
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #444746 !important;
+}

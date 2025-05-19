@@ -131,6 +131,10 @@ body
     {
         max-width: 450px;
     }
+    .popscid, .popgoogle, .id-verification
+    {
+        max-width: 350px;
+    }
 
 }
 

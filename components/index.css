@@ -225,6 +225,61 @@ video::-webkit-media-controls-panel {
 }
 
 
+.id-verification
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 40px;
+    background: linear-gradient(0deg,#d8caba,#ece4db 50.9%);
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.75), 0 4px 0 -1px #8c5a33,inset 0 0 1px 2px hsla(0,0%,100%,.3);
+    gap: 15px;
+}
+
+.id-verification .id-text
+{
+    text-align: center;
+}
+
+.id-verification .id-input
+{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    height: 40px;
+    background: #f0f0f0;
+    color: #000;
+    background: linear-gradient(0deg,rgb(255,255,255),rgb(255,255,255) 48%,rgb(244,247,250) 0,rgb(255,255,255));
+    box-shadow: inset 0 2px 0 0 rgba(0,0,0,.25),0 2px 0 0 hsla(0,0%,100%,.2);
+    outline: none;
+}
+
+.id-verification .id-btn
+{
+    background-color: #000;
+    box-shadow: inset 0 3px 0 #4d4d4d;
+    color: #fff;
+    font-size: 11px;
+    padding: 8px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.id-verification .id-alert
+{
+    font-size: 9px;
+    color: #fff !important;
+}
 /* .wrap::before
 {
     content: '';
@@ -235,3 +290,67 @@ video::-webkit-media-controls-panel {
     background: url('https://store.supercell.com/_next/static/media/section-divider-2x.bbe7e030.png') no-repeat center;
     height: 5px;
 } */
+
+.content .accountInfo
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.accountInfo .nickname
+{
+    font-size: 14px;
+}
+
+.accountInfo .info
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 20px;
+}
+
+.info .list
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.th
+{
+    background: #7e57c2 !important;
+}
+.exp
+{
+    background: #2196f3 !important;
+}
+
+.clan
+{
+    background: #555 !important;
+}
+
+.trophy
+{
+    background: #f9a825 !important;
+}
+
+.list img
+{
+    max-width: 20px;
+}
