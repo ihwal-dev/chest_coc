@@ -301,12 +301,12 @@ video::-webkit-media-controls-panel {
     flex-direction: column;
     margin-bottom: 10px;
     text-align: center;
-    margin-top: 10px;
 }
 
 .accountInfo .nickname
 {
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .accountInfo .info

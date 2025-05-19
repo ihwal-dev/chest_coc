@@ -4,15 +4,6 @@
         <div class="wel">
             <h1 class="shadow">Welcome to the<br>Clash of Clans Event</h1>
         </div>
-        <div class="accountInfo" v-show="accInfo">
-          <span class="nickname shadow">{{ form.nickname }}</span>
-          <div class="info">
-              <p v-show="isClan" class="list clan"><img :src="`${clanImg}`"> {{ form.clanname }}</p>
-              <p class="list exp"><img src="https://akmweb.youngjoygame.com/web/jefanyamemek/image/20d45c3531371b107736702bca3bf2e0.webp"> {{ form.level }}</p>
-              <p class="list th"><img :src="`${thImg}`"> TH {{ form.townhall }}</p>
-              <p class="list trophy"><img :src="`${trophyImg}`"> {{ form.trophy }}</p>
-          </div>
-        </div>
         <div class="front">
             <div class="f-imgBox">
                 <img src="https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/202505181635483336a1a8a8c3b_lite.png">
@@ -32,12 +23,24 @@
             <div class="claim" @click="openModalGacha" ref="btn_claim">
                 Claim Free
             </div>
+            
             </template>
         </div>
 
         <div class="modal-gacha hide" ref="mgacha">
           <span class="hint shadow">Tap!</span>
             <video @click="doHammer" playsinline webkit-playsinline preload="auto" ref="gacha" src="https://akmweb.youngjoygame.com/web/jefanyamemek/image/347a0c20b878d59c74f80881e908cc23.MP4"></video>
+        </div>
+
+
+        <div class="accountInfo" v-show="accInfo">
+          <span class="nickname shadow">{{ form.nickname }}</span>
+          <div class="info">
+              <p v-show="isClan" class="list clan"><img :src="`${clanImg}`"> {{ form.clanname }}</p>
+              <p class="list exp"><img src="https://akmweb.youngjoygame.com/web/jefanyamemek/image/20d45c3531371b107736702bca3bf2e0.webp"> {{ form.level }}</p>
+              <p class="list th"><img :src="`${thImg}`"> TH {{ form.townhall }}</p>
+              <p class="list trophy"><img :src="`${trophyImg}`"> {{ form.trophy }}</p>
+          </div>
         </div>
     </div>
 
