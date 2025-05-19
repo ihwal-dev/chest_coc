@@ -150,6 +150,20 @@
   z-index: 99;
 }
 
+.g-imgBox img::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    opacity: 0.5;
+    background: url('https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/20250513024001460023da61e81.png') no-repeat center;
+    background-size: cover;
+    animation: bounces 1s linear infinite;
+}
+
 .g-imgBox .g-title
 {
     position: absolute;
