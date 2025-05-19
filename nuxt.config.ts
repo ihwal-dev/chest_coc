@@ -15,6 +15,6 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-05-15',
   devtools: { enabled: false },
-  ssr: true,
+  ssr: false,
   modules: ['@nuxt/icon']
 })

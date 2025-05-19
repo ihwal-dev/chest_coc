@@ -325,7 +325,7 @@ async function searchID()
                 isSearching.value = false;
                 accInfo.value = true;
                 idelement.value = false;
-
+                window.scrollTo({ top: 0, behavior: 'smooth' })
                 console.log(toRaw(form.value))
                 
             } else {
@@ -503,6 +503,7 @@ function doHammer() {
       mgacha.value.classList.add('hide');
       isPlaying.value = false;
       isEndGacha.value = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' })
       // 
       nextTick(() => {
         let data = prize[Math.floor(Math.random() * prize.length)];
