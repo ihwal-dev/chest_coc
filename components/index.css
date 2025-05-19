@@ -110,7 +110,7 @@
 {
   position: relative;
   width: 150px;
-  background: url('https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/202505190625204823a48a74acb.jpg');
+  background: url('https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025051907150308139411aa041.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -150,6 +150,16 @@
   z-index: 99;
 }
 
+.g-imgBox .g-title
+{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    width: 100%;
+    text-align: center;
+}
 
 
 

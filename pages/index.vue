@@ -8,9 +8,10 @@
             <div class="f-imgBox">
                 <img src="https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/202505181635483336a1a8a8c3b_lite.png">
             </div>
-            <span class="f-title shadow">{{ title || 'Free Chest'}}</span>
+            <!-- <span class="f-title shadow">{{ title || 'Free Chest'}}</span> -->
             <template v-if="isEndGacha">
               <div class="g-imgBox" ref="gimgbox">
+                <span class="g-title shadow">{{ title || 'Free Chest'}}</span>
                 <img :src="`${gimg}`"/>
               </div>
             <div class="claim">
@@ -148,7 +149,7 @@ function doHammer() {
         let data = prize[Math.floor(Math.random() * prize.length)];
         title.value = data.name;
         gimg.value = data.img;
-        gimgbox.value.style.backgroundImage = `url('https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025051907150308139411aa041.jpg')`;
+        // gimgbox.value.style.backgroundImage = `url('https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025051907150308139411aa041.jpg')`;
       });
     }, 1850);
   }
