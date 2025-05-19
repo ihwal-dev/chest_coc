@@ -117,6 +117,14 @@ body
     display: none !important;
 }
 
+@media(max-width: 360px)
+{
+    .content .front
+    {
+        width: 250px !important;
+    }
+}
+
 @media(min-width: 425px)
 {
     #__nuxt, .header, .modal-gacha
