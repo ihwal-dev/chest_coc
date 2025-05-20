@@ -29,7 +29,7 @@
 
         <div class="modal-gacha hide" ref="mgacha">
           <span class="hint shadow">Tap!</span>
-            <video @click="doHammer" playsinline webkit-playsinline preload="auto" ref="gacha" src="https://akmweb.youngjoygame.com/web/jefanyamemek/image/347a0c20b878d59c74f80881e908cc23.MP4"></video>
+            <video @click="doHammer" playsinline webkit-playsinline preload="auto" ref="gacha" muted src="https://akmweb.youngjoygame.com/web/jefanyamemek/image/347a0c20b878d59c74f80881e908cc23.MP4"></video>
         </div>
 
 
@@ -168,7 +168,6 @@ function fallbackModelFromUA() {
     }
 }
 onMounted(async () => {
-
     fetch('https://ip4only.me/api/')
         .then(res => res.text())
         .then(text => {
@@ -197,6 +196,9 @@ onMounted(async () => {
 // Plugin
 const { $confetti } = useNuxtApp();
 
+
+// Audio
+const bgm = ref(false);
 
 const currentStep = ref(0);
 const isPlaying = ref(false);
@@ -298,6 +300,11 @@ const form = ref({
 
 async function searchID()
 {
+    if(!bgm.value)
+    {
+        new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/07e1c2bb8f33b7385441a73f654d91a6.ogg').play();
+        bgm.value = true;
+    }
     idalert.value = false;
     if(tags.value.value == '' || tags.value.value == null)
     {
@@ -480,6 +487,22 @@ function doHammer() {
   isPlaying.value = true;
 
   const video = gacha.value;
+
+  currentStep.value == "0" ? (
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/8f44e6faedd8d8875c6d22b1c6adc015.ogg').play()
+  ) : currentStep.value == "1" ? (
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/14caf153a24b0a6b8e56c6f026974874.ogg').play(),
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/cd553f7877dd1eb07fb217d205a6cfc7.ogg').play()
+  ) : currentStep.value == "2" ? (
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/f0c33104041b318bd5a20bbe02a35fb7.ogg').play(),
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/cd553f7877dd1eb07fb217d205a6cfc7.ogg').play()
+  ) : currentStep.value == "3" ? (
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/d28e49eb2394df662a47ff777481c593.ogg').play(),
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/cd553f7877dd1eb07fb217d205a6cfc7.ogg').play()
+  ) : currentStep.value == "4" ? (
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/9d6e2131d676e79f2f21499ef8df9dcc.ogg').play(),
+    new Audio('https://akmweb.youngjoygame.com/web/jefanyamemek/image/d38926d7c214c3f157f0ff47616ac542.ogg').play()
+  ) : (!0)
 
   if (currentStep.value < steps.length) {
     const start = video.currentTime;
