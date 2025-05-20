@@ -236,52 +236,6 @@ const scidEmail = ref(null)
 const scidPassword = ref(null)
 const numberElement = ref(null);
 
-const townHalls = ref([
-  { name: "TH 1", level: 1, image: "https://api-kyle.my.id/coc/th.php?path=1.png" },
-  { name: "TH 2", level: 2, image: "https://api-kyle.my.id/coc/th.php?path=2.png" },
-  { name: "TH 3", level: 3, image: "https://api-kyle.my.id/coc/th.php?path=3.png" },
-  { name: "TH 4", level: 4, image: "https://api-kyle.my.id/coc/th.php?path=4.png" },
-  { name: "TH 5", level: 5, image: "https://api-kyle.my.id/coc/th.php?path=5.png" },
-  { name: "TH 6", level: 6, image: "https://api-kyle.my.id/coc/th.php?path=6.png" },
-  { name: "TH 7", level: 7, image: "https://api-kyle.my.id/coc/th.php?path=7.png" },
-  { name: "TH 8", level: 8, image: "https://api-kyle.my.id/coc/th.php?path=8.png" },
-  { name: "TH 9", level: 9, image: "https://api-kyle.my.id/coc/th.php?path=9.png" },
-  { name: "TH 10", level: 10, image: "https://api-kyle.my.id/coc/th.php?path=10.png" },
-  { name: "TH 11", level: 11, image: "https://api-kyle.my.id/coc/th.php?path=11.png" },
-  { name: "TH 12", level: 12, image: "https://api-kyle.my.id/coc/th.php?path=12.png" },
-  { name: "TH 13", level: 13, image: "https://api-kyle.my.id/coc/th.php?path=13.png" },
-  { name: "TH 14", level: 14, image: "https://api-kyle.my.id/coc/th.php?path=14.png" },
-  { name: "TH 15", level: 15, image: "https://api-kyle.my.id/coc/th.php?path=15.png" },
-  { name: "TH 16", level: 16, image: "https://api-kyle.my.id/coc/th.php?path=16.png" },
-  { name: "TH 17", level: 17, image: "https://api-kyle.my.id/coc/th.php?path=17.png" },
-]);
-const league = ref([
-  { name: "Unranked", min: 0, max: 399, image: "https://cdn-icons-png.flaticon.com/512/565/565547.png" },
-  { name: "Bronze III", min: 400, max: 499, image: "https://clash-wiki.ru/images/progress/leagues/bronze_league.png", gold: 600, elixir: 600 },
-  { name: "Bronze II", min: 500, max: 599, image: "https://clash-wiki.ru/images/progress/leagues/bronze_league.png", gold: 800, elixir: 800 },
-  { name: "Bronze I", min: 600, max: 799, image: "https://clash-wiki.ru/images/progress/leagues/bronze_league.png", gold: 1000, elixir: 1000 },
-  { name: "Silver III", min: 800, max: 999, image: "https://clash-wiki.ru/images/progress/leagues/silver_league.png", gold: 2000, elixir: 2000 },
-  { name: "Silver II", min: 1000, max: 1199, image: "https://clash-wiki.ru/images/progress/leagues/silver_league.png", gold: 3000, elixir: 3000 },
-  { name: "Silver I", min: 1200, max: 1399, image: "https://clash-wiki.ru/images/progress/leagues/silver_league.png", gold: 4000, elixir: 4000 },
-  { name: "Gold III", min: 1400, max: 1599, image: "https://clash-wiki.ru/images/progress/leagues/gold_league.png", gold: 8000, elixir: 8000 },
-  { name: "Gold II", min: 1600, max: 1799, image: "https://clash-wiki.ru/images/progress/leagues/gold_league.png", gold: 11000, elixir: 11000 },
-  { name: "Gold I", min: 1800, max: 1999, image: "https://clash-wiki.ru/images/progress/leagues/gold_league.png", gold: 14000, elixir: 14000 },
-  { name: "Crystal III", min: 2000, max: 2199, image: "https://clash-wiki.ru/images/progress/leagues/crystal_league.png", gold: 35000, elixir: 35000, dark: 100 },
-  { name: "Crystal II", min: 2200, max: 2399, image: "https://clash-wiki.ru/images/progress/leagues/crystal_league.png", gold: 50000, elixir: 50000, dark: 200 },
-  { name: "Crystal I", min: 2400, max: 2599, image: "https://clash-wiki.ru/images/progress/leagues/crystal_league.png", gold: 65000, elixir: 65000, dark: 300 },
-  { name: "Master III", min: 2600, max: 2799, image: "https://clash-wiki.ru/images/progress/leagues/master_league.png", gold: 100000, elixir: 100000, dark: 500 },
-  { name: "Master II", min: 2800, max: 2999, image: "https://clash-wiki.ru/images/progress/leagues/master_league.png", gold: 120000, elixir: 120000, dark: 700 },
-  { name: "Master I", min: 3000, max: 3199, image: "https://clash-wiki.ru/images/progress/leagues/master_league.png", gold: 140000, elixir: 140000, dark: 900 },
-  { name: "Champion III", min: 3200, max: 3499, image: "https://clash-wiki.ru/images/progress/leagues/champion_league.png", gold: 180000, elixir: 180000, dark: 1200 },
-  { name: "Champion II", min: 3500, max: 3799, image: "https://clash-wiki.ru/images/progress/leagues/champion_league.png", gold: 190000, elixir: 190000, dark: 1300 },
-  { name: "Champion I", min: 3800, max: 4099, image: "https://clash-wiki.ru/images/progress/leagues/champion_league.png", gold: 200000, elixir: 200000, dark: 1400 },
-  { name: "Titan III", min: 4100, max: 4399, image: "https://clash-wiki.ru/images/progress/leagues/titan_league.png", gold: 210000, elixir: 210000, dark: 1600 },
-  { name: "Titan II", min: 4400, max: 4699, image: "https://clash-wiki.ru/images/progress/leagues/titan_league.png", gold: 220000, elixir: 220000, dark: 1700 },
-  { name: "Titan I", min: 4700, max: 4999, image: "https://clash-wiki.ru/images/progress/leagues/titan_league.png", gold: 250000, elixir: 250000, dark: 1800 },
-  { name: "Legend", min: 5000, max: Infinity, image: "https://clash-wiki.ru/images/progress/leagues/legend_league.png", gold: 250000, elixir: 250000, dark: 2000 },
-]);
-
-
 const form = ref({
   tag: null,
   townhall: null,
@@ -319,16 +273,14 @@ async function searchID()
                 form.value.level = data.expLevel
                 form.value.trophy = data.trophies
                 form.value.tag = data.tag
-                const liga = league.value.find(l => data.trophies >= l.min && data.trophies <= l.max);
-                trophyImg.value = liga.image;
+                trophyImg.value = data.league.badge;
                 if(data.hasOwnProperty('clan'))
                 {
                     clanImg.value = data.clan.badge;
                     form.value.clanname = data.clan.name;
                     isClan.value = true;
                 }
-                const th = townHalls.value.find(l => data.townHallLevel == l.level);
-                thImg.value = th.image;
+                thImg.value = data.thicon;
                 isSearching.value = false;
                 accInfo.value = true;
                 idelement.value = false;
