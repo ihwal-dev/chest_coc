@@ -470,7 +470,12 @@ const prize = [
   {name:'Kyudo Queen', img: 'https://images2.imgbox.com/89/9b/FktmxAXX_o.png'},
   {name:'Cyclone Prince', img: 'https://images2.imgbox.com/da/45/tzKjZvC1_o.png'},
   {name:'Grand Monk', img: 'https://images2.imgbox.com/2d/c3/geYgdYvQ_o.png'},
-  {name:'High Seas Scenery', img: 'https://images2.imgbox.com/0f/b0/Ybkuz0Ku_o.png'}
+  {name:'High Seas Scenery', img: 'https://images2.imgbox.com/0f/b0/Ybkuz0Ku_o.png'},
+  {name:'Justice Secenery', img: 'https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025052014101417886a005450e.png'},
+  {name:'War Machine Secenery', img: 'https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/20250520141156827f65a0f95cf.png'},
+  {name:'Space Secenery', img: 'https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025052014123496797052dd08b.png'},
+  {name:'Clashoween24 Secenery', img: 'https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/202505201413048146b19945b40.png'},
+  {name:'Ghost Secenery', img: 'https://p1-image.cdn-aihelp.net/FileService/UserFile/0/202505/2025052014134154406d86837b2.png'},
 ]
 
 
